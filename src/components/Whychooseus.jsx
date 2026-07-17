@@ -1,4 +1,4 @@
-import './WhyChooseUs.css'
+import './Whychooseus.css'
 
 const FEATURES = [
   {

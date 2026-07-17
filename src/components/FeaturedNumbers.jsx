@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Button ke liye Link
-import './FeaturedNumbers.css';
+import './Featurednumbers.css';
 
 const PATTERN_COLORS = {
   VIP: '#f1d89a',
