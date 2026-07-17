@@ -1,0 +1,216 @@
+.hw-page {
+  min-height: 100vh;
+  background: radial-gradient(120% 100% at 80% 0%, #141010, #0b0908 60%);
+  color: #f3ece0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.hw-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  position: sticky;
+  top: 0;
+  background: rgba(11,9,8,0.92);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.hw-back {
+  background: transparent;
+  border: 1px solid rgba(212,175,106,0.3);
+  color: #f1d89a;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.hw-back:hover { background: rgba(212,175,106,0.1); }
+
+.hw-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.hw-logo-mark { color: #d4af6a; font-size: 13px; }
+.hw-logo-serif { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #f3ece0; }
+.hw-logo-sans { font-size: 10px; letter-spacing: 0.28em; color: #9a9187; }
+
+.hw-nav-btn {
+  background: transparent;
+  border: none;
+  color: #f3ece0;
+  font-size: 13px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.hw-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 56px 48px 100px;
+}
+
+.hw-header { margin-bottom: 56px; }
+
+.hw-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d4af6a;
+  margin: 0 0 14px;
+}
+
+.hw-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 500;
+  color: #f3ece0;
+  margin: 0 0 10px;
+}
+
+.hw-sub {
+  font-size: 15px;
+  color: #9a9187;
+  margin: 0;
+}
+
+.hw-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 64px;
+}
+
+.hw-step {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.hw-step-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.hw-step-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f1d89a, #d4af6a);
+  color: #16110a;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hw-step-line {
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(212,175,106,0.4), rgba(212,175,106,0.1));
+  margin: 4px 0;
+}
+
+.hw-step-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 0 0 32px 0;
+  flex: 1;
+}
+
+.hw-step-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.hw-step-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #f3ece0;
+  margin: 0 0 8px;
+}
+
+.hw-step-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #9a9187;
+  margin: 0;
+}
+
+.hw-cta {
+  text-align: center;
+  padding: 48px 32px;
+  border: 1px solid rgba(212,175,106,0.2);
+  border-radius: 18px;
+  background: linear-gradient(160deg, #171310, #0e0b09);
+}
+
+.hw-cta h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #f3ece0;
+  margin: 0 0 10px;
+}
+
+.hw-cta p {
+  font-size: 14px;
+  color: #9a9187;
+  margin: 0 0 28px;
+}
+
+.hw-cta-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hw-btn {
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hw-btn:hover { transform: translateY(-2px); }
+
+.hw-btn-solid {
+  background: linear-gradient(135deg, #f1d89a, #d4af6a);
+  color: #16110a;
+  box-shadow: 0 6px 20px rgba(212,175,106,0.25);
+}
+
+.hw-btn-whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .hw-container { padding: 36px 20px 70px; }
+  .hw-title { font-size: 36px; }
+  .hw-nav { padding: 16px 20px; }
+  .hw-step-card { padding-bottom: 24px; }
+}

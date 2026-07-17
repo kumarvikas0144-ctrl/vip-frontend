@@ -1,0 +1,241 @@
+.tm-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 20px 48px 120px;
+}
+
+.tm-heading {
+  max-width: 560px;
+  margin-bottom: 44px;
+}
+
+.tm-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d4af6a;
+  margin: 0 0 14px;
+}
+
+.tm-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: #f3ece0;
+  margin: 0;
+}
+
+.tm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.tm-card {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(212, 175, 106, 0.16);
+  border-radius: 14px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.tm-card:hover {
+  border-color: rgba(212, 175, 106, 0.4);
+  transform: translateY(-3px);
+}
+
+.tm-stars {
+  margin-bottom: 16px;
+}
+
+.tm-star {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 14px;
+}
+
+.tm-star-filled {
+  color: #f1d89a;
+}
+
+.tm-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #d8cfc2;
+  margin: 0 0 22px;
+  flex: 1;
+}
+
+.tm-author {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 14px;
+}
+
+.tm-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #f3ece0;
+}
+
+.tm-city {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9a9187;
+  margin-top: 2px;
+}
+
+@media (max-width: 640px) {
+  .tm-section {
+    padding: 0 24px 80px;
+  }
+
+  .tm-title {
+    font-size: 30px;
+  }
+
+  .tm-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .tm-section {
+    padding: 0 16px 64px;
+  }
+
+  .tm-title {
+    font-size: 25px;
+  }
+
+  .tm-card {
+    padding: 20px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tm-card {
+    transition: none;
+  }
+}
+.tm-write-btn {
+  margin-top: 16px;
+  background: transparent;
+  border: 1px solid rgba(212,175,106,0.35);
+  color: #f1d89a;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: block;
+}
+
+.tm-write-btn:hover { background: rgba(212,175,106,0.1); }
+
+.tm-form-wrap {
+  background: linear-gradient(160deg, #171310, #0e0b09);
+  border: 1px solid rgba(212,175,106,0.25);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 36px;
+  max-width: 640px;
+}
+
+.tm-form-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: #f3ece0;
+  margin: 0 0 20px;
+}
+
+.tm-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.tm-input {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,175,106,0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #f3ece0;
+  font-size: 13px;
+  width: 100%;
+}
+
+.tm-input::placeholder { color: #9a9187; }
+.tm-input:focus { outline: none; border-color: rgba(212,175,106,0.5); }
+
+.tm-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.tm-rating-label { font-size: 13px; color: #9a9187; }
+
+.tm-star-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: rgba(255,255,255,0.2);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s;
+}
+
+.tm-star-btn.active { color: #f1d89a; }
+
+.tm-textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,175,106,0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #f3ece0;
+  font-size: 13px;
+  resize: vertical;
+  margin-bottom: 16px;
+  font-family: inherit;
+}
+
+.tm-textarea::placeholder { color: #9a9187; }
+.tm-textarea:focus { outline: none; border-color: rgba(212,175,106,0.5); }
+
+.tm-submit {
+  background: linear-gradient(135deg, #f1d89a, #d4af6a);
+  color: #16110a;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.tm-submit:hover { transform: translateY(-1px); }
+.tm-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.tm-form-done {
+  background: rgba(111,207,151,0.1);
+  border: 1px solid rgba(111,207,151,0.3);
+  border-radius: 12px;
+  padding: 20px 24px;
+  color: #6fcf97;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 480px) {
+  .tm-form-grid { grid-template-columns: 1fr; }
+}

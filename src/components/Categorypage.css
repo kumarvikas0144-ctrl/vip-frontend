@@ -1,0 +1,361 @@
+.cp-page {
+  min-height: 100vh;
+  background: radial-gradient(120% 100% at 80% 0%, #141010, #0b0908 60%);
+  color: #f3ece0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ---------- Navbar ---------- */
+.cp-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 0;
+  background: rgba(11, 9, 8, 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.cp-back {
+  background: transparent;
+  border: 1px solid rgba(212, 175, 106, 0.3);
+  color: #f1d89a;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cp-back:hover {
+  background: rgba(212, 175, 106, 0.1);
+}
+
+.cp-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.cp-logo-mark {
+  color: #d4af6a;
+  font-size: 13px;
+}
+
+.cp-logo-serif {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f3ece0;
+}
+
+.cp-logo-sans {
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  color: #9a9187;
+}
+
+.cp-nav-right {
+  display: flex;
+  gap: 12px;
+}
+
+.cp-nav-btn {
+  background: transparent;
+  border: none;
+  color: #f3ece0;
+  font-size: 13px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.cp-nav-btn:hover {
+  opacity: 1;
+}
+
+/* ---------- Page Header ---------- */
+.cp-header {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 56px 48px 32px;
+}
+
+.cp-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d4af6a;
+  margin: 0 0 14px;
+}
+
+.cp-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 500;
+  color: #f3ece0;
+  margin: 0 0 10px;
+}
+
+.cp-sub {
+  font-size: 14px;
+  color: #9a9187;
+  margin: 0;
+}
+
+/* ---------- Content ---------- */
+.cp-content {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 24px 48px 100px;
+}
+
+.cp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+/* ---------- Number Card ---------- */
+.cp-card {
+  background: linear-gradient(160deg, #171310, #0e0b09);
+  border: 1px solid rgba(212, 175, 106, 0.2);
+  border-radius: 16px;
+  padding: 22px 22px 20px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cp-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 106, 0.5);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.cp-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cp-pattern {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  opacity: 0.9;
+}
+
+.cp-heart {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.cp-heart:hover {
+  transform: scale(1.2);
+}
+
+.cp-heart-active {
+  animation: cp-pop 0.35s ease;
+}
+
+@keyframes cp-pop {
+  0% { transform: scale(0.8); }
+  50% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+.cp-number {
+  font-family: 'Space Mono', monospace;
+  font-size: 21px;
+  font-weight: 700;
+  color: #f3ece0;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.cp-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #9a9187;
+  margin-bottom: 20px;
+}
+
+.cp-status {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.cp-status-available {
+  color: #6fcf97;
+  border: 1px solid rgba(111, 207, 151, 0.3);
+}
+
+.cp-status-reserved {
+  color: #f2c94c;
+  border: 1px solid rgba(242, 201, 76, 0.3);
+}
+
+.cp-status-sold {
+  color: #9a9187;
+  border: 1px solid rgba(154, 145, 135, 0.3);
+}
+
+.cp-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+}
+
+.cp-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-price-label {
+  font-size: 10px;
+  color: #9a9187;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.cp-price-value {
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  color: #f1d89a;
+  margin-top: 2px;
+}
+
+.cp-buy {
+  background: linear-gradient(135deg, #f1d89a, #d4af6a);
+  color: #16110a;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cp-buy:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(212, 175, 106, 0.3);
+}
+
+.cp-buy:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------- States ---------- */
+.cp-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 0;
+  color: #9a9187;
+  font-size: 14px;
+}
+
+.cp-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(212, 175, 106, 0.2);
+  border-top-color: #d4af6a;
+  border-radius: 50%;
+  animation: cp-spin 0.8s linear infinite;
+}
+
+@keyframes cp-spin {
+  to { transform: rotate(360deg); }
+}
+
+.cp-error,
+.cp-empty {
+  text-align: center;
+  padding: 80px 0;
+  color: #9a9187;
+  font-size: 15px;
+}
+
+.cp-back-btn {
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 106, 0.35);
+  color: #f1d89a;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cp-back-btn:hover {
+  background: rgba(212, 175, 106, 0.1);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .cp-nav {
+    padding: 16px 20px;
+  }
+
+  .cp-header {
+    padding: 36px 20px 20px;
+  }
+
+  .cp-title {
+    font-size: 36px;
+  }
+
+  .cp-content {
+    padding: 16px 20px 70px;
+  }
+
+  .cp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .cp-title {
+    font-size: 28px;
+  }
+
+  .cp-nav {
+    padding: 14px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cp-card,
+  .cp-heart,
+  .cp-buy,
+  .cp-spinner {
+    animation: none;
+    transition: none;
+  }
+}

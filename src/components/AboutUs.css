@@ -1,0 +1,224 @@
+.ab-page {
+  min-height: 100vh;
+  background: radial-gradient(120% 100% at 80% 0%, #141010, #0b0908 60%);
+  color: #f3ece0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.ab-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  position: sticky;
+  top: 0;
+  background: rgba(11,9,8,0.92);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.ab-back {
+  background: transparent;
+  border: 1px solid rgba(212,175,106,0.3);
+  color: #f1d89a;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.ab-back:hover { background: rgba(212,175,106,0.1); }
+
+.ab-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.ab-logo-mark { color: #d4af6a; font-size: 13px; }
+.ab-logo-serif { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #f3ece0; }
+.ab-logo-sans { font-size: 10px; letter-spacing: 0.28em; color: #9a9187; }
+
+.ab-nav-btn {
+  background: transparent;
+  border: none;
+  color: #f3ece0;
+  font-size: 13px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.ab-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 48px 100px;
+}
+
+.ab-header { margin-bottom: 48px; }
+
+.ab-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d4af6a;
+  margin: 0 0 14px;
+}
+
+.ab-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 500;
+  color: #f3ece0;
+  margin: 0;
+}
+
+.ab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.ab-card {
+  background: linear-gradient(160deg, #171310, #0e0b09);
+  border: 1px solid rgba(212,175,106,0.2);
+  border-radius: 18px;
+  padding: 36px 32px;
+}
+
+.ab-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f1d89a, #d4af6a);
+  color: #16110a;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.ab-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #f3ece0;
+  margin: 0 0 4px;
+}
+
+.ab-role {
+  font-size: 13px;
+  color: #9a9187;
+  margin: 0 0 20px;
+}
+
+.ab-bio {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #d8cfc2;
+  margin: 0 0 16px;
+}
+
+.ab-contact-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.ab-btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.ab-btn:hover { transform: translateY(-2px); }
+
+.ab-whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+}
+
+.ab-insta {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: white;
+}
+
+.ab-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ab-stat-title, .ab-values-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #f3ece0;
+  margin: 0 0 20px;
+}
+
+.ab-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ab-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.ab-stat strong {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  color: #f1d89a;
+}
+
+.ab-stat span {
+  font-size: 12px;
+  color: #9a9187;
+  margin-top: 4px;
+}
+
+.ab-value-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ab-value-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.ab-value-icon { font-size: 20px; flex-shrink: 0; }
+
+.ab-value-item strong {
+  display: block;
+  font-size: 14px;
+  color: #f3ece0;
+  margin-bottom: 2px;
+}
+
+.ab-value-item p {
+  font-size: 12px;
+  color: #9a9187;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .ab-container { padding: 36px 20px 70px; }
+  .ab-title { font-size: 36px; }
+  .ab-grid { grid-template-columns: 1fr; }
+  .ab-nav { padding: 16px 20px; }
+}

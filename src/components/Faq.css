@@ -1,0 +1,135 @@
+.faq-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 48px 110px;
+}
+
+.faq-heading {
+  max-width: 560px;
+  margin-bottom: 40px;
+}
+
+.faq-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d4af6a;
+  margin: 0 0 14px;
+}
+
+.faq-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: #f3ece0;
+  margin: 0;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid rgba(212, 175, 106, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.015);
+  overflow: hidden;
+  transition: border-color 0.25s ease;
+}
+
+.faq-item-open {
+  border-color: rgba(212, 175, 106, 0.45);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 20px 24px;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #f3ece0;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid #f1d89a;
+  outline-offset: -2px;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 106, 0.35);
+  color: #f1d89a;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+.faq-answer-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq-item-open .faq-answer-wrap {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-wrap > * {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.faq-answer {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #9a9187;
+  padding: 0 24px 20px;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .faq-section {
+    padding: 0 24px 70px;
+  }
+
+  .faq-title {
+    font-size: 30px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .faq-section {
+    padding: 0 16px 56px;
+  }
+
+  .faq-title {
+    font-size: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-answer-wrap,
+  .faq-item {
+    transition: none;
+  }
+}
