@@ -94,7 +94,7 @@ export default function CategoryPage() {
     const cleanSlug = slug.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
 
     // 3. Backend se SAARE numbers uthao aur yahan filter maro
-    fetch('http://172.20.10.6:5000/api/numbers')
+    fetch('https://vip-backend-3ds4.onrender.com/api/numbers')
       .then((r) => r.json())
       .then((data) => {
         if (Array.isArray(data)) {

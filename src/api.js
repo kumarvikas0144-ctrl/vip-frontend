@@ -1,4 +1,4 @@
-const API_BASE = 'http://172.20.10.6:5000/api'
+const API_BASE = 'https://vip-backend-3ds4.onrender.com/api'
 
 async function handleResponse(res) {
   if (!res.ok) {

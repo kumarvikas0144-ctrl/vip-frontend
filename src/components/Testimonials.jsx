@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Testimonials.css'
 
-const API = 'http://172.20.10.6:5000/api'
+const API = 'https://vip-backend-3ds4.onrender.com/api'
 
 function Stars({ count }) {
   return (

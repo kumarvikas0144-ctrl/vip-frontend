@@ -61,7 +61,7 @@ export default function FeaturedNumbers() {
   const [dbNumbers, setDbNumbers] = useState([]);
 
   useEffect(() => {
-    fetch('http://172.20.10.6:5000/api/numbers')
+    fetch('https://vip-backend-3ds4.onrender.com/api/numbers')
       .then((res) => res.json())
       .then((data) => {
         // Sirf 15 lakh se kam wale numbers

@@ -24,4 +24,13 @@ router.post('/', async (req, res) => {
   }
 })
 
+router.delete('/:id', async (req, res) => {
+  try {
+    await NumberModel.findByIdAndDelete(req.params.id)
+    res.json({ message: 'Deleted' })
+  } catch (err) {
+    res.status(500).json({ error: err.message })
+  }
+})
+
 export default router

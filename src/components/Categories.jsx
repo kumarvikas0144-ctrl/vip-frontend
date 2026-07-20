@@ -12,7 +12,7 @@ export default function Categories() {
     // 🚀 BRAHMASTRA 2.0: Categories aur Numbers dono ek sath mangwao
     Promise.all([
       api.getCategories(),
-      fetch('http://172.20.10.6:5000/api/numbers').then(r => r.json())
+      fetch('https://vip-backend-3ds4.onrender.com/api/numbers').then(r => r.json())
     ])
       .then(([catsData, numsData]) => {
         

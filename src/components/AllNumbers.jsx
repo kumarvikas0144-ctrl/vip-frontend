@@ -50,7 +50,7 @@ export default function AllNumbers() {
   const [dbNumbers, setDbNumbers] = useState([]);
 
   useEffect(() => {
-    fetch('http://172.20.10.6:5000/api/numbers')
+    fetch('https://vip-backend-3ds4.onrender.com/api/numbers')
       .then((res) => res.json())
       .then((data) => {
         const normalNumbers = data.filter(item => item.price < 1500000);

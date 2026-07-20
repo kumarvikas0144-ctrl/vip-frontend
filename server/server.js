@@ -9,6 +9,7 @@ import reviewRoutes from './routes/reviews.js'
 import enquiryRoutes from './routes/enquiries.js'
 
 const app = express()
+
 app.use(cors())
 app.use(express.json())
 
@@ -20,14 +21,8 @@ app.use('/api/enquiries', enquiryRoutes)
 
 app.get('/', (req, res) => res.send('VIP Number API running'))
 
-app.delete('/api/numbers/:id', async (req, res) => {
-  await Number.findByIdAndDelete(req.params.id);
-  res.json({ message: "Deleted!" });
-});
-
 const PORT = process.env.PORT || 5000
 
-
 connectDB().then(() => {
-  app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`))
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 })

@@ -88,7 +88,7 @@ function Navbar() {
 function NumberPlateCard() {
   const [top, setTop] = useState(null)
   useEffect(() => {
-    fetch("http://172.20.10.6:5000/api/numbers")
+    fetch("https://vip-backend-3ds4.onrender.com/api/numbers")
       .then(r => r.json())
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
@@ -141,7 +141,7 @@ function Hero() {
     e.preventDefault()
     if (!query.trim()) return
     setSearching(true)
-    fetch("http://172.20.10.6:5000/api/numbers")
+    fetch("https://vip-backend-3ds4.onrender.com/api/numbers")
       .then(r => r.json())
       .then(data => {
         const q = query.replace(/\s+/g, "").toLowerCase()

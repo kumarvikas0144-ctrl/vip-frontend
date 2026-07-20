@@ -4,7 +4,7 @@ function ReviewSection() {
   const [reviews, setReviews] = React.useState([])
 
   function load() {
-    fetch("http://localhost:5000/api/reviews")
+    fetch("https://vip-backend-3ds4.onrender.com/api/reviews")
       .then(r => r.json())
       .then(data => setReviews(Array.isArray(data) ? data : []))
       .catch(() => {})
@@ -14,7 +14,7 @@ function ReviewSection() {
 
   async function handleDelete(id) {
     if (!window.confirm("Ye review delete karo?")) return
-    await fetch(`http://localhost:5000/api/reviews/${id}`, { method: "DELETE" })
+    await fetch(`https://vip-backend-3ds4.onrender.com/api/reviews/${id}`, { method: "DELETE" })
     load()
   }
 
@@ -50,7 +50,7 @@ export default function AdminDashboard() {
   });
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/numbers')
+    fetch('https://vip-backend-3ds4.onrender.com/api/numbers')
       .then((res) => res.json())
       .then((data) => {
         setAllNumbers(data);
@@ -85,7 +85,7 @@ export default function AdminDashboard() {
 
     try {
       for (let num of extractedNumbers) {
-        await fetch('http://localhost:5000/api/numbers', {
+        await fetch('https://vip-backend-3ds4.onrender.com/api/numbers', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -103,7 +103,7 @@ export default function AdminDashboard() {
       setBulkData({ ...bulkData, price: '' });
       
       // Naye numbers ko list mein refresh karo
-      fetch('http://localhost:5000/api/numbers')
+      fetch('https://vip-backend-3ds4.onrender.com/api/numbers')
         .then((res) => res.json())
         .then((data) => setAllNumbers(data));
 
@@ -117,7 +117,7 @@ export default function AdminDashboard() {
     if (!window.confirm("Bhai, pakka delete karu? Bikk gaya kya?")) return;
 
     try {
-      await fetch(`http://localhost:5000/api/numbers/${id}, {
+      await fetch(`https://vip-backend-3ds4.onrender.com/api/numbers/${id}, {
         method: 'DELETE'
       }`);
       setAllNumbers(allNumbers.filter(num => num._id !== id));
