@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Premiumshowcase.css';
+import './PremiumShowcase.css';
 
 export default function PremiumShowcase() {
   const [premiumNumbers, setPremiumNumbers] = useState([]);
