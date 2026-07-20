@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import Review from '../models/Review.js'
+import { verifyAdmin } from '../middleware/auth.js'
 
 const router = Router()
 
@@ -23,7 +24,7 @@ router.post('/', async (req, res) => {
 
 export default router
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', verifyAdmin, async (req, res) => {
   try {
     await Review.findByIdAndDelete(req.params.id)
     res.json({ message: 'Deleted' })

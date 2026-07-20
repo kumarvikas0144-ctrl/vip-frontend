@@ -13,6 +13,9 @@ import AdminDashboard from './components/AdminDashboard'
 import ContactPage from './components/ContactPage'
 import AboutUs from './components/AboutUs'
 import HowItWorks from './components/HowItWorks'
+import AdminLogin from './components/AdminLogin'
+import AdminForgotPassword from './components/AdminForgotPassword'
+import ProtectedAdminRoute from './components/ProtectedAdminRoute'
 
 function HomePage() {
   return (
@@ -35,11 +38,12 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/category/:slug" element={<CategoryPage />} />
       <Route path="/all-numbers" element={<AllNumbers />} />
-      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin-login" element={<AdminLogin />} />
+      <Route path="/admin-forgot-password" element={<AdminForgotPassword />} />
+      <Route path="/admin" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/about" element={<AboutUs />} />
       <Route path="/how-it-works" element={<HowItWorks />} />
     </Routes>
   )
 }
-//time

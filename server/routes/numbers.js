@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import NumberModel from '../models/Number.js'
+import { verifyAdmin } from '../middleware/auth.js'
 
 const router = Router()
 
@@ -15,7 +16,7 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.post('/', async (req, res) => {
+router.post('/', verifyAdmin, async (req, res) => {
   try {
     const number = await NumberModel.create(req.body)
     res.status(201).json(number)
@@ -24,7 +25,7 @@ router.post('/', async (req, res) => {
   }
 })
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', verifyAdmin, async (req, res) => {
   try {
     await NumberModel.findByIdAndDelete(req.params.id)
     res.json({ message: 'Deleted' })

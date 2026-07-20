@@ -7,6 +7,7 @@ import categoryRoutes from './routes/categories.js'
 import faqRoutes from './routes/faqs.js'
 import reviewRoutes from './routes/reviews.js'
 import enquiryRoutes from './routes/enquiries.js'
+import authRoutes from './routes/auth.js'
 
 const app = express()
 
@@ -18,6 +19,7 @@ app.use('/api/categories', categoryRoutes)
 app.use('/api/faqs', faqRoutes)
 app.use('/api/reviews', reviewRoutes)
 app.use('/api/enquiries', enquiryRoutes)
+app.use('/api/auth', authRoutes)
 
 app.get('/', (req, res) => res.send('VIP Number API running'))
 
