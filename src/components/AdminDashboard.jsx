@@ -87,7 +87,7 @@ export default function AdminDashboard() {
       for (let num of extractedNumbers) {
         await fetch('https://vip-backend-3ds4.onrender.com/api/numbers', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('adminToken')}` },
           body: JSON.stringify({
             number: num,
             price: Number(bulkData.price),
@@ -114,12 +114,13 @@ export default function AdminDashboard() {
   };
 
   const handleDelete = async (id) => {
+    try {
     if (!window.confirm("Bhai, pakka delete karu? Bikk gaya kya?")) return;
 
-    try {
-      await fetch(`https://vip-backend-3ds4.onrender.com/api/numbers/${id}, {
-        method: 'DELETE'
-      }`);
+      await fetch(`https://vip-backend-3ds4.onrender.com/api/numbers/${id}`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${localStorage.getItem('adminToken')}` }
+      });
       setAllNumbers(allNumbers.filter(num => num._id !== id));
     } catch (err) {
       alert("Delete nahi hua, server check kar.");
