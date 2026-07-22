@@ -9,7 +9,7 @@ export default function PremiumShowcase() {
       .then((res) => res.json())
       .then((data) => {
         // Sirf 15 Lakh ya usse mehnge numbers filter karo
-        const expensiveNumbers = data.filter(item => item.price >= 1500000);
+        const expensiveNumbers = data.filter(item => item.price >= 1500000).sort((a,b) => b.price - a.price).slice(0,3);
         setPremiumNumbers(expensiveNumbers);
       })
       .catch((err) => console.log("API Error:", err));
