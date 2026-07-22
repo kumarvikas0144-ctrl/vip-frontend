@@ -33,7 +33,7 @@ function Navbar() {
       <div className="vn-logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
         <span className="vn-logo-mark">◆</span>
         <span className="vn-logo-text">
-          <span className="vn-logo-serif">VIP</span>
+          <span className="vn-logo-serif">99VIP</span>
           <span className="vn-logo-sans">NUMBER</span>
         </span>
       </div>

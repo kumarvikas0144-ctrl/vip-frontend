@@ -10,7 +10,7 @@ export default function AboutUs() {
         <button className="ab-back" onClick={() => navigate(-1)}>← Back</button>
         <div className="ab-logo" onClick={() => navigate('/')}>
           <span className="ab-logo-mark">◆</span>
-          <span className="ab-logo-serif">VIP</span>
+          <span className="ab-logo-serif">99VIP</span>
           <span className="ab-logo-sans">NUMBER</span>
         </div>
         <button className="ab-nav-btn" onClick={() => navigate('/')}>Home</button>

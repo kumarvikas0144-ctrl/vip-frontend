@@ -126,7 +126,7 @@ export default function CategoryPage() {
         </button>
         <div className="cp-logo" onClick={() => navigate('/')}>
           <span className="cp-logo-mark">◆</span>
-          <span className="cp-logo-serif">VIP</span>
+          <span className="cp-logo-serif">99VIP</span>
           <span className="cp-logo-sans">NUMBER</span>
         </div>
         <div className="cp-nav-right">

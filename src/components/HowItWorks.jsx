@@ -49,7 +49,7 @@ export default function HowItWorks() {
         <button className="hw-back" onClick={() => navigate(-1)}>← Back</button>
         <div className="hw-logo" onClick={() => navigate('/')}>
           <span className="hw-logo-mark">◆</span>
-          <span className="hw-logo-serif">VIP</span>
+          <span className="hw-logo-serif">99VIP</span>
           <span className="hw-logo-sans">NUMBER</span>
         </div>
         <button className="hw-nav-btn" onClick={() => navigate('/')}>Home</button>

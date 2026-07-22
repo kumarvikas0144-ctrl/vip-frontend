@@ -10,7 +10,7 @@ export default function ContactPage() {
         <button className="ct-back" onClick={() => navigate(-1)}>← Back</button>
         <div className="ct-logo" onClick={() => navigate('/')}>
           <span className="ct-logo-mark">◆</span>
-          <span className="ct-logo-serif">VIP</span>
+          <span className="ct-logo-serif">99VIP</span>
           <span className="ct-logo-sans">NUMBER</span>
         </div>
         <button className="ct-nav-btn" onClick={() => navigate('/')}>Home</button>

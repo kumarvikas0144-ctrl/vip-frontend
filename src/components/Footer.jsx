@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="ft-logo">
             <span className="ft-logo-mark">◆</span>
             <span className="ft-logo-text">
-              <span className="ft-logo-serif">VIP</span>
+              <span className="ft-logo-serif">99VIP</span>
               <span className="ft-logo-sans">NUMBER</span>
             </span>
           </div>
