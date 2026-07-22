@@ -71,6 +71,7 @@ export default function Footer() {
         <span>© {new Date().getFullYear()} VIP Number. All rights reserved.</span>
         <span>Made for buyers and sellers across India.</span>
       </div>
+      <div className="ft-credit">Designed & Developed by Shivam Dutt · 📞 7777023442</div>
     </footer>
   )
 }
